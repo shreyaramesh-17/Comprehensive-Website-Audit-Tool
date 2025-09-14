@@ -28,22 +28,6 @@ A **Flask-based web application** that audits websites for **security**, **perfo
 - pip  
 - (Optional) Virtual environment (`venv` / `virtualenv`)  
 
-### Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/shreyaramesh-17/Comprehensive-Website-Audit-Tool.git
-cd Comprehensive-Website-Audit-Tool
-
-# Create and activate a virtual environment
-python3 -m venv venv
-source venv/bin/activate       # Windows: venv\Scripts\activate
-
-export FLASK_APP=app.py       # Linux/Mac
-set FLASK_APP=app.py          # Windows
-export FLASK_ENV=development
-flask run
 
 
-# Install dependencies
-pip install -r requirements.txt
+
