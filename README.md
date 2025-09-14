@@ -19,11 +19,6 @@ A **Flask-based web application** that audits websites for **security**, **perfo
 
 ---
 
-## 🎨 Demo / Screenshots
-
-> *(Add screenshots of the app interface and PDF report here)*  
-
----
 
 ## 🛠️ Getting Started
 
