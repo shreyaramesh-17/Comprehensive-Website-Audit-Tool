@@ -1,0 +1,38 @@
+@app.route('/report')
+def report():
+    website_url = session.get('website_url', 'Unknown URL')
+
+    # Example vulnerabilities - you can replace with real scan results
+    vulnerabilities = [
+        {
+            "name": "Missing Content-Security-Policy header",
+            "fix": "Add a strict Content-Security-Policy header (e.g., default-src 'self';)",
+            "file": website_url
+        },
+        {
+            "name": "Missing anti-clickjacking header (X-Frame-Options or frame-ancestors)",
+            "fix": "Set X-Frame-Options: DENY (or use CSP frame-ancestors)",
+            "file": website_url
+        },
+        {
+            "name": "Missing X-Content-Type-Options: nosniff header",
+            "fix": "Set X-Content-Type-Options: nosniff",
+            "file": website_url
+        },
+        {
+            "name": "Missing HSTS header (Strict-Transport-Security)",
+            "fix": "Set Strict-Transport-Security header to enforce HTTPS",
+            "file": website_url
+        },
+        {
+            "name": "Short or missing meta description",
+            "fix": "Add unique meta description (~140 chars)",
+            "file": website_url
+        }
+    ]
+
+    return render_template(
+        'report_generated.html',
+        website_url=website_url,
+        vulnerabilities=vulnerabilities
+    )

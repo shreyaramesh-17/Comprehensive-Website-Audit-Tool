@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Codence Web Audit</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="bg-dark">
+<div class="container">
+<h1 class="title glitch" data-text="WELCOME TO CODENCE WEB AUDIT">WELCOME TO CODENCE WEB AUDIT</h1>
+<p class="subtitle">This website is used to check for vulnerabilities.</p>
+<p class="description">Our tool scans for security flaws, performance bottlenecks, SEO issues, and accessibility compliance to make your website safer and faster.</p>
+<div class="buttons">
+<a href="/enter-url" class="btn">SCAN WEBSITE</a>
+<a href="{{ url_for('report') }}" class="btn neon">Sample Report</a>
+<script src="{{ url_for('static', filename='voice.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Website URL | Codence Web Audit</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .url-container {
+            text-align: center;
+            margin-top: 100px;
+            color: #fff;
+        }
+        input[type="text"] {
+            width: 50%;
+            padding: 12px;
+            font-size: 18px;
+            border: 2px solid #0ff;
+            border-radius: 10px;
+            background: #111;
+            color: #0ff;
+            text-align: center;
+        }
+        button {
+            margin-top: 20px;
+            padding: 12px 24px;
+            font-size: 18px;
+            color: #111;
+            background: #0ff;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: #00f5ff;
+            box-shadow: 0 0 15px #0ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="url-container">
+        <h1 class="glitch" data-text="ENTER WEBSITE URL">ENTER WEBSITE URL</h1>
+        <p>Provide the URL you want to scan for vulnerabilities:</p>
+        <form action="/scan" method="POST">
+            <input type="text" name="website_url" placeholder="https://example.com" required>
+            <br>
+            <button type="submit">Start Scan</button>
+        </form>
+    </div>
+</body>
+</html>
